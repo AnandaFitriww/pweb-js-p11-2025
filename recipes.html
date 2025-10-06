@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipe Collection</title>
+    <link rel="icon" type="image/png" href="recipe.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/auth.js"></script>
+</head>
+<body>
+    <div id="auth-blocker" class="auth-blocker-overlay hidden">
+        <div class="auth-blocker-content">
+            <h2>Nononoo🚫</h2>
+            <p>You must login first to view the recipe collection.</p>
+            <button id="goto-login-btn">To Login Page</button>
+        </div>
+    </div>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="#" class="nav-logo">Sepresep Kanmakan</a>
+            <div class="nav-user">
+                <span id="theme-icon" class="theme-icon-display"></span> 
+                
+                <div class="theme-switch-wrapper">
+                    <label class="theme-switch" for="dark-mode-toggle">
+                        <input type="checkbox" id="dark-mode-toggle" />
+                        <div class="slider round"></div>
+                    </label>
+                </div>
+                <span id="welcome-message">Welcome, User!</span>
+                <button id="logout-button">LOGOUT</button>
+            </div>
+        </div>
+    </nav>
+
+    <main class="container">
+        <header class="page-header">
+            <h1>Recipe Collection For You</h1>
+            <p>Discover your favorite cousines from around the world</p>
+        </header>
+
+        <div class="filter-bar">
+            <input type="search" id="search-input" placeholder="Search by name or ingredients...">
+            <select id="cuisine-filter"></select>
+            <div class="filter-buttons">
+                 <button id="filter-favorites">❤️ Favorites</button>
+                 <button id="filter-tried">✅ Tried</button>
+            </div>
+            <span id="recipe-count"></span>
+        </div>
+
+        <div id="recipe-grid" class="recipe-grid">
+             </div>
+        
+        <div id="loading-indicator" class="hidden">Loading...</div>
+    </main>
+
+    <div id="recipe-modal" class="modal-overlay hidden">
+        <div class="modal-content">
+            <button class="modal-close-btn">&times;</button>
+            <div id="modal-body"></div>
+        </div>
+    </div>
+
+    <script src="js/recipes.js"></script>
+
+    <div id="logout-confirm-modal" class="modal-overlay hidden">
+        <div class="modal-content modal-confirm">
+            <h3>Cofirmation</h3>
+            <p>Do you want to end this session?</p>
+            <div class="modal-confirm-actions">
+                <button id="confirm-logout-btn" class="btn-danger">Yes</button>
+                <button id="cancel-logout-btn" class="btn-secondary">Cancel</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
