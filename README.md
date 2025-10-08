@@ -23,14 +23,17 @@ Proyek web sederhana untuk login dan menjelajah koleksi resep masakan. Setelah l
 
 
 ### Fitur Utama
-- **Login nyata (DummyJSON)**: Kirim `username` dan `password` ke API `https://dummyjson.com/auth/login`.
+- **Login Page (DummyJSON)**: Kirim `username` dan `password` ke API `https://dummyjson.com/auth/login`.
 - **Proteksi halaman resep**: Jika belum login, halaman `recipes.html` menampilkan overlay dan tombol ke `index.html`.
-- **Dark mode**: Toggle tema terang/gelap, tersimpan di `localStorage`.
 - **Pencarian & Filter**: Cari berdasarkan nama/ingredient, filter berdasarkan `cuisine`.
-- **Favorit & Tried**: Tandai resep sebagai favorit atau sudah dicoba (persist di `localStorage`, per pengguna).
 - **Detail Resep (Modal)**: Lihat gambar, rating, waktu masak, ingredient, dan instruksi.
 - **Logout dengan konfirmasi**: Dialog konfirmasi sebelum keluar.
 
+### Fitur Tambahan
+- **Dark mode**: Toggle tema terang/gelap, tersimpan di `localStorage`.
+- **Favorit & Tried**: Tandai resep sebagai favorit atau sudah dicoba (persist di `localStorage`, per pengguna).
+- Simpan preferensi tiap akun agar tidak hilang setelah logout
+  
 ### Teknologi yang Dipakai
 - **HTML5, CSS3 (Poppins font), JavaScript murni**
 - **API publik**: `https://dummyjson.com` untuk login dan daftar resep
